@@ -21,9 +21,11 @@
     <EditText
         android:id="@+id/passwordRegister"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginTop="340dp"
+        android:autofillHints="AUTOFILL_HINT_PASSWORD"
         android:hint="Password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +44,7 @@
 
     <TextView
         android:id="@+id/signIn"
-        android:layout_width="0dp"
+        android:layout_width="48dp"
         android:layout_height="50dp"
         android:layout_marginStart="252dp"
         android:layout_marginTop="404dp"
@@ -65,13 +67,19 @@
     <EditText
         android:id="@+id/emailRegister"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginTop="232dp"
+        android:autofillHints="AUTOFILL_HINT_EMAIL_ADDRESS"
         android:hint="E-mail"
+        android:inputType="textWebEmailAddress"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"
