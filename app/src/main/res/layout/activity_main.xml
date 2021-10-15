@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -17,20 +18,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.179" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="228dp"
-        android:text="E-mail address"
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="340dp"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="372dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="232dp"
+        android:hint="E-mail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,51 +44,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="308dp"
         android:text="Password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="264dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="452dp"
-        android:text="Don't have an account?"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="452dp"
-        android:text="Register"
-        android:onClick="onClickRegisterButton"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="196dp"
+        android:text="E-mail address"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="508dp"
+        android:layout_marginTop="476dp"
         android:onClick="onClickSignInButton"
         android:text="Sign In"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signIn"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="404dp"
+        android:gravity="center"
+        android:onClick="onClickRegisterButton"
+        android:text="Register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="420dp"
+        android:text="Don't have an account?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
