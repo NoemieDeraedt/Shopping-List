@@ -1,10 +1,12 @@
 package com.example.firebaseapplication;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import java.util.List;
 
@@ -24,6 +26,10 @@ public class CustomListAdapter extends ArrayAdapter<ListItem> {
         TextView price = (TextView) convertView.findViewById(R.id.itemPrice);
         title.setText(item.name);
         price.setText(Double.toString(item.price) + "€");
+
+        CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
+        ListItem checkItem = getItem(position);
+        checkBox.setTag(checkItem);
         return convertView;
     }
 }
