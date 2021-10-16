@@ -6,26 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ShoppingList">
 
-    <EditText
-        android:id="@+id/searchBar"
-        android:layout_width="380dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:autofillHints="AUTOFILL_HINT_PASSWORD"
-        android:hint="Search item..."
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="Product"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="409dp"
-        android:layout_height="670dp"
-        android:layout_marginTop="60dp"
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="Price"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

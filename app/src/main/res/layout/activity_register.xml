@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.179" />
 
     <EditText
-        android:id="@+id/passwordRegister"
+        android:id="@+id/searchBar"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="340dp"
