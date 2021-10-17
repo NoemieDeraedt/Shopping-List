@@ -8,7 +8,10 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -31,6 +34,7 @@ public class ShoppingList extends AppCompatActivity {
     public TextView itemTitle;
     public TextView totalView;
     public Double total = 0.0;
+    public EditText searchBar;
 
     public void seeUserList() {
         adapter.clear();
@@ -57,8 +61,8 @@ public class ShoppingList extends AppCompatActivity {
         itemTitle = (TextView)findViewById(R.id.pageTitle);
         totalView = (TextView)findViewById(R.id.total);
 
-        EditText text = findViewById(R.id.searchBar);
-        text.addTextChangedListener(new TextWatcher() {
+        searchBar = findViewById(R.id.searchBar);
+        searchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
 
@@ -82,7 +86,7 @@ public class ShoppingList extends AppCompatActivity {
             public void afterTextChanged(Editable editable) { }
         });
 
-        if (text.length() == 0)
+        if (searchBar.length() == 0)
             seeUserList();
     }
 
@@ -122,6 +126,29 @@ public class ShoppingList extends AppCompatActivity {
 
         intent.putExtra("total", total);
         intent.putExtra("number", userItems.size());
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.shopping_menu, menu);
+        return true;
+    }
+
+    public void onClearItems(MenuItem item) {
+        userItems.clear();
+        calculateTotal();
+        seeUserList();
+        searchBar.setText("");
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+
+    public void onClickDisconnect(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
