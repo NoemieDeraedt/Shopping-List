@@ -1,7 +1,6 @@
 package com.example.firebaseapplication;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +29,7 @@ public class CustomListAdapter extends ArrayAdapter<ListItem> {
         CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
         ListItem checkItem = getItem(position);
         checkBox.setTag(checkItem);
+        checkBox.setChecked(checkItem.checked);
         return convertView;
     }
 }
