@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.179" />
 
     <EditText
-        android:id="@+id/searchBar"
+        android:id="@+id/passwordRegister"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="340dp"
@@ -65,12 +65,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/emailRegister"
+        android:id="@+id/usernameRegister"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="232dp"
         android:autofillHints="AUTOFILL_HINT_EMAIL_ADDRESS"
-        android:hint="E-mail"
+        android:hint="Username"
         android:inputType="textWebEmailAddress"
         android:selectAllOnFocus="false"
         android:singleLine="true"
