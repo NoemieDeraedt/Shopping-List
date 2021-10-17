@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseApplication">
         <activity
+            android:name=".Payment"
+            android:exported="true"
+            android:label="Payment" />
+        <activity
             android:name=".ShoppingList"
             android:exported="true"
             android:label="Shopping List" />

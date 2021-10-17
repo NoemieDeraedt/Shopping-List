@@ -1,6 +1,8 @@
 package com.example.firebaseapplication;
 
-public class ListItem {
+import java.io.Serializable;
+
+public class ListItem implements Serializable {
     String name;
     double price;
     boolean checked;

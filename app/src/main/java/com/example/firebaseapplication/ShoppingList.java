@@ -3,6 +3,7 @@ package com.example.firebaseapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -28,6 +29,8 @@ public class ShoppingList extends AppCompatActivity {
     public ListView listView;
     public CustomListAdapter adapter;
     public TextView itemTitle;
+    public TextView totalView;
+    public Double total = 0.0;
 
     public void seeUserList() {
         adapter.clear();
@@ -52,6 +55,7 @@ public class ShoppingList extends AppCompatActivity {
         adapter = new CustomListAdapter(ShoppingList.this, R.layout.list_item_layout, listToDisplay);
 
         itemTitle = (TextView)findViewById(R.id.pageTitle);
+        totalView = (TextView)findViewById(R.id.total);
 
         EditText text = findViewById(R.id.searchBar);
         text.addTextChangedListener(new TextWatcher() {
@@ -103,5 +107,21 @@ public class ShoppingList extends AppCompatActivity {
                     Toast.LENGTH_SHORT);
             toast.show();
         }
+        calculateTotal();
+    }
+
+    public void calculateTotal() {
+        total = 0.0;
+        for (int i = 0; i < userItems.size(); i++)
+            total += userItems.get(i).price;
+        totalView.setText(String.valueOf(total) + "€");
+    }
+
+    public void onClickValidate(View view) {
+        Intent intent = new Intent(this, Payment.class);
+
+        intent.putExtra("total", total);
+        intent.putExtra("number", userItems.size());
+        startActivity(intent);
     }
 }
