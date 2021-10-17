@@ -49,6 +49,12 @@ public class ShoppingList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_list);
 
+        Intent intent = getIntent();
+        String username = (String) intent.getStringExtra("username");
+        TextView usernameView = (TextView) findViewById(R.id.usernameView);
+
+        usernameView.setText("Hello " + String.valueOf(username) + "!");
+
         allItems.add(new ListItem("Butter", 3, false));
         allItems.add(new ListItem("Milk", 3, false));
         allItems.add(new ListItem("Pasta", 0.59, false));
