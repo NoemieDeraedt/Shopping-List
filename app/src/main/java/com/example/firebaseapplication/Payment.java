@@ -26,7 +26,7 @@ public class Payment extends AppCompatActivity {
         Double total = (Double) intent.getDoubleExtra("total", 0);
         Integer number = (Integer) intent.getIntExtra("number", 0);
 
-        totalView.setText(String.valueOf(total));
+        totalView.setText(String.valueOf(total) + "€");
         nbItemsView.setText(String.valueOf(number));
     }
 }
