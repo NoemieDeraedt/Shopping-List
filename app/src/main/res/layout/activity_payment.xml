@@ -10,12 +10,46 @@
         android:id="@+id/searchBar2"
         android:layout_width="363dp"
         android:layout_height="50dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="328dp"
         android:autofillHints="AUTOFILL_HINT_PASSWORD"
         android:hint="Card number"
         android:inputType="text|phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="268dp"
+        android:text="Payment information"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchBar3"
+        android:layout_width="189dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="396dp"
+        android:autofillHints="AUTOFILL_HINT_PASSWORD"
+        android:hint="Expiration date"
+        android:inputType="text|phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="167dp"
+        android:onClick="onClickGoBackButton"
+        android:text="Go back to shopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,24 +57,12 @@
         android:id="@+id/searchBar4"
         android:layout_width="138dp"
         android:layout_height="50dp"
-        android:layout_marginTop="314dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="12dp"
         android:autofillHints="AUTOFILL_HINT_PASSWORD"
         android:hint="CVV"
         android:inputType="text|phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/searchBar3"
-        android:layout_width="189dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="314dp"
-        android:autofillHints="AUTOFILL_HINT_PASSWORD"
-        android:hint="Expiration date"
-        android:inputType="text|phone"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -66,17 +88,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="184dp"
-        android:text="Payment information"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/total_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,4 +108,16 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="473dp"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

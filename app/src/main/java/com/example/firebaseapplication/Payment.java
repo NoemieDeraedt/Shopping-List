@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -28,5 +29,9 @@ public class Payment extends AppCompatActivity {
 
         totalView.setText(String.valueOf(total) + "€");
         nbItemsView.setText(String.valueOf(number));
+    }
+
+    public void onClickGoBackButton(View view) {
+        finish();
     }
 }
