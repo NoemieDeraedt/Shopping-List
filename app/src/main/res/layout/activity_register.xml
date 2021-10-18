@@ -50,7 +50,7 @@
         android:layout_marginTop="404dp"
         android:gravity="center"
         android:onClick="onClickSignInButton"
-        android:text="Sign In"
+        android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="196dp"
-        android:text="E-mail address"
+        android:text="Username"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -25,14 +25,19 @@ public class MainActivity extends AppCompatActivity {
         username = (EditText)findViewById(R.id.username);
         password = (EditText)findViewById(R.id.password);
 
-        if (password.getText().length() < 6) {
+        if (password.getText().length() < 6 && !password.getText().toString().contains(" ")) {
             Toast toast = Toast.makeText(getApplicationContext(),
-                "Your password needs to have more than 6 characters.",
+                "Your password needs to have more than 6 characters and no space.",
                 Toast.LENGTH_SHORT);
             toast.show();
         } else if (username.getText().length() == 0) {
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Your username cannot be empty.",
+                    Toast.LENGTH_SHORT);
+            toast.show();
+        } else if (username.getText().length() < 6) {
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Your username need to have at least 6 characters.",
                     Toast.LENGTH_SHORT);
             toast.show();
         } else {
