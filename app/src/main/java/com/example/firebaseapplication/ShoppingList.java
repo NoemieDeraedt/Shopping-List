@@ -162,6 +162,7 @@ public class ShoppingList extends AppCompatActivity {
 
     public void onClickDisconnect(MenuItem item) {
         Intent intent = new Intent(this, MainActivity.class);
+        finish();
         startActivity(intent);
     }
 }
