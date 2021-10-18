@@ -56,10 +56,10 @@ public class ShoppingList extends AppCompatActivity {
         usernameView.setText("Hello " + String.valueOf(username) + "!");
 
         allItems.add(new ListItem("Butter", 3, false));
-        allItems.add(new ListItem("Milk", 3, false));
+        allItems.add(new ListItem("Milk", 1.5, false));
         allItems.add(new ListItem("Pasta", 0.59, false));
         allItems.add(new ListItem("Orange Juice", 3, false));
-        allItems.add(new ListItem("Cheese", 3, false));
+        allItems.add(new ListItem("Cheese", 2, false));
 
         listView = (ListView)findViewById(R.id.list_view);
         adapter = new CustomListAdapter(ShoppingList.this, R.layout.list_item_layout, listToDisplay);
@@ -128,11 +128,18 @@ public class ShoppingList extends AppCompatActivity {
     }
 
     public void onClickValidate(View view) {
-        Intent intent = new Intent(this, Payment.class);
+        if (userItems.size() != 0) {
+            Intent intent = new Intent(this, Payment.class);
 
-        intent.putExtra("total", total);
-        intent.putExtra("number", userItems.size());
-        startActivity(intent);
+            intent.putExtra("total", total);
+            intent.putExtra("number", userItems.size());
+            startActivity(intent);
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "You don't have any items!",
+                    Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
     @Override
