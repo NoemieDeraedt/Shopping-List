@@ -109,7 +109,18 @@ public class ShoppingList extends AppCompatActivity {
                 toast.show();
             }
         } else {
-            userItems.remove(tag);
+            if (searchBar.length() == 0) {
+                userItems.remove(tag);
+            } else {
+                int index = 0;
+
+                for (index = 0; index < userItems.size(); index++) {
+                    if (userItems.get(index).name == tag.name) {
+                        break;
+                    }
+                }
+                userItems.remove(index);
+            }
             if (!itemTitle.getText().toString().equals("Searching items..."))
                 seeUserList();
             Toast toast = Toast.makeText(getApplicationContext(),
